@@ -1,12 +1,31 @@
 <div class="container mt-5">
     <div class="row">
-        <div class="col-sm-6 offset-3">
-            <h3 class="fs-2 text-center text-primary">E-CNAM</h3>
-            <mat-card>
+        <div class="col-sm-4 offset-4">
+            <form #loginform="ngForm" (ngSubmit)="loginUser()">
+            <h2 class="fs-1 text-center text-primary">E-CNAM</h2>
+            <mat-card class="text-start">
                 <mat-card-content>
-
+                    <p>Pseudo </p>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <input matInput name="login" placeholder="Pseudo " [(ngModel)]="user.login"  value=" " required #login="ngModel"
+                        [class.is-invalid]="login.invalid && login.touched">
+                        </mat-form-field>
+                        <small class="text-danger" [class.d-none]="login.valid || login.untouched">Veillez saisir un email valide</small>
+                            <p> Mot de passe </p>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input matInput placeholder="******" type="password" [(ngModel)]="user.password" value=" " name="password" #password="ngModel" 
+                            required [class.is-invalid]="password.invalid && password.touched">
+                            </mat-form-field>
+                            
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Veillez saisir un mot de passe</small>
+                            <mat-card-actions align="end">
+                                <button [disabled]="loginform.form.invalid" mat-raised-button color="primary" class="me-2">Se connecter</button>
+                            </mat-card-actions>
+                            
                 </mat-card-content>
             </mat-card>
+        </form>
         </div>
     </div>
+    
 </div>
