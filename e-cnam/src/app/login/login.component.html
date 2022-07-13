@@ -2,7 +2,11 @@
   <div class="row">
     <div class="col-sm-4 offset-4">
       <form #loginform="ngForm" (ngSubmit)="loginUser()">
+        <br>
+        <br>
+        <br>
         <h2 class="fs-1 text-center text-primary">E-CNAM</h2>
+        <br>
         <mat-card class="text-start">
           <mat-card-content>
             <p>Pseudo</p>
@@ -10,9 +14,9 @@
               <input
                 matInput
                 name="login"
+                type="text"
                 placeholder="Pseudo "
                 [(ngModel)]="user.login"
-                value=" "
                 required
                 #login="ngModel"
                 [class.is-invalid]="login.invalid && login.touched"
@@ -21,7 +25,7 @@
             <small
               class="text-danger"
               [class.d-none]="login.valid || login.untouched"
-              >Veillez saisir un email valide</small
+              >Veillez saisir un Pseudo valide</small
             >
             <p>Mot de passe</p>
             <mat-form-field appearance="outline" class="w-100">
