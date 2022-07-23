@@ -21,12 +21,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RendezVausListComponent } from './rendez-vaus-list/rendez-vaus-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RendezVausListComponent
   ],
   imports: [
     BrowserModule,

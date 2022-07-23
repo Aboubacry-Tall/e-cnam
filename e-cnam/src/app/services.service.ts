@@ -9,9 +9,18 @@ import { User } from './login/models/user';
 export class ServicesService {
 
   private server = "http://localhost:8082/lib/";
+  private baseUrl = "http://localhost:8082/lib/Rendiezvaus";
   constructor(private http: HttpClient) { }
 
   login(user: User): Observable<any>{
     return this.http.post(this.server + 'login', user);
   }
+
+
+
+  getRendiezvausList(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
+    
+  }
+  
 }
