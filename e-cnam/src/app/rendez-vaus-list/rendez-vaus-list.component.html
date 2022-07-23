@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Rendez vaus List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>dateAjout</th>
+            <th>inam</th>
+            <th>numRecu</th>
+            <th>description</th>
+            <th>etat</th>
+            <th>dateRVous</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rendezVau of rendezVaus | async">
+            <td>{{rendezVau.dateAjout}}</td>
+            <td>{{rendezVau.inam}}</td>
+            <td>{{rendezVau.numRecu}}</td>
+            <td>{{rendezVau.description}}</td>
+            <td>{{rendezVau.etat}}</td>
+            <td>{{rendezVau.dateRVous}}</td>
+            <td><button (click)="deleteRendezVaus()" class="btn btn-danger">Delete</button>
+                <button (click)="updateRendezVaus()" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="  RendezVausDetails()" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
