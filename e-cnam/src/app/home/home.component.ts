@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ServicesService } from '../services.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'ECNAM';
-  constructor() { }
+  constructor(private router: Router,
+    private servicesService: ServicesService) { }
 
   ngOnInit(): void {
   }
 
+  UserId(){
+    return localStorage.getItem('userId');
+  }
+  logout(){
+    localStorage.removeItem('userId');
+    localStorage.removeItem('login');
+    this.router.navigate(['']);
+  }
 }

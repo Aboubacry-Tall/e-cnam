@@ -23,4 +23,18 @@ export class ServicesService {
     
   }
   
+
+  updateRendiezVaus(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
+
+
+  getRendezVaus(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+
+  loggedin(){
+    return localStorage.getItem('userId');
+  }
 }

@@ -1,5 +1,5 @@
 export class RendezVaus{
-      id ?: number;
+      id ?: number ;
 	  dateAjout ?: String;
 	  inam ?: String;
 	  numRecu ?: String;

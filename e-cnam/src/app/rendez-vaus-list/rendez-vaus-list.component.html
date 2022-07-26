@@ -23,10 +23,10 @@
             <td>{{rendezVau.description}}</td>
             <td>{{rendezVau.etat}}</td>
             <td>{{rendezVau.dateRVous}}</td>
-            <td><button (click)="deleteRendezVaus()" class="btn btn-danger">Delete</button>
-                <button (click)="updateRendezVaus()" class="btn btn-info" style="margin-left: 10px">Update</button>
-                <button (click)="  RendezVausDetails()" class="btn btn-info" style="margin-left: 10px">Details</button>
-            </td>
+            <td>
+              <button (click)="updateRendezVaus(rendezVau.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button  (click)="RendezVausDetails(rendezVau.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
           </tr>
         </tbody>
       </table>

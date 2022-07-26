@@ -22,13 +22,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RendezVausListComponent } from './rendez-vaus-list/rendez-vaus-list.component';
+import { UpdateRendiezvausComponent } from './update-rendiezvaus/update-rendiezvaus.component';
+import { DetailsRendiezvausComponent } from './details-rendiezvaus/details-rendiezvaus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RendezVausListComponent
+    RendezVausListComponent,
+    UpdateRendiezvausComponent,
+    DetailsRendiezvausComponent
   ],
   imports: [
     BrowserModule,

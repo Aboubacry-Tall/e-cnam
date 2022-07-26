@@ -11,6 +11,7 @@ import { ServicesService } from '../services.service';
 })
 export class RendezVausListComponent implements OnInit {
   rendezVaus!: Observable<RendezVaus[]>;
+  
   constructor(private service: ServicesService, private router:Router) {}
 
   
@@ -23,17 +24,11 @@ export class RendezVausListComponent implements OnInit {
   }
 
   
-
-
-  deleteRendezVaus() {
-    
+  RendezVausDetails(id?: number){
+    this.router.navigate(['details', id]);
   }
 
-  RendezVausDetails(){
-   
-  }
-
-  updateRendezVaus(){
-    
+  updateRendezVaus(id?: number){
+    this.router.navigate(['update', id]);
   }
 }
