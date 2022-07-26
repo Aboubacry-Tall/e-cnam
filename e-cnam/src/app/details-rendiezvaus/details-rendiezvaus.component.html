@@ -1,0 +1,29 @@
+<h2>Rendiz Vaus Details</h2> 
+
+<hr/>
+<div *ngIf="rendezVaus">
+  <div>
+    <label><b>inam: </b></label> {{rendezVaus.inam}}
+  </div>
+  <div>
+    <label><b>date Ajout: </b></label> {{rendezVaus.dateAjout}}
+  </div>
+  <div>
+    <label><b>description : </b></label> {{rendezVaus.description}}
+  </div>  
+
+  <div>
+    <label><b>num recu : </b></label> {{rendezVaus.numRecu}}
+  </div> 
+
+  <div>
+    <label><b>description : </b></label> {{rendezVaus.etat}}
+  </div> 
+  <div>
+    <label><b>description : </b></label> {{rendezVaus.dateRVous}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to rendezVaus List</button><br>

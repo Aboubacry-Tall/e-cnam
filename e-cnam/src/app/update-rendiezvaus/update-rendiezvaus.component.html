@@ -1,0 +1,36 @@
+<h3>Update Rendiez Vaus </h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">inam</label>
+      <input type="text" class="form-control" id="inam" required [(ngModel)]="rendezVau.inam" name="inam">
+    </div>
+
+    <div class="form-group">
+      <label for="name">dateAjout</label>
+      <input type="text" class="form-control" id="dateAjout" required [(ngModel)]="rendezVau.dateAjout" name="dateAjout">
+    </div>
+
+    <div class="form-group">
+      <label for="name">description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="rendezVau.description" name="description">
+    </div>
+
+    <div class="form-group">
+        <label for="name">etat</label>
+        <input type="text" class="form-control" id="etat" required [(ngModel)]="rendezVau.etat" name="etat">
+      </div>
+
+      <div class="form-group">
+        <label for="name">numRecu</label>
+        <input type="text" class="form-control" id="numRecu" required [(ngModel)]="rendezVau.numRecu" name="numRecu">
+      </div>
+
+      <div class="form-group">
+        <label for="name">dateRVous</label>
+        <input type="text" class="form-control" id="dateRVous" required [(ngModel)]="rendezVau.dateRVous" name="dateRVous">
+      </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
